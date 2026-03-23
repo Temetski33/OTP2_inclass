@@ -61,4 +61,12 @@ public class ShoppingCart {
         return totalCost;
 
     }
+
+    public static double calculateTotalCost(double[] prices, double[] quantities) {
+        double total = 0;
+        for (int i = 0; i < prices.length; i++) {
+            total += multiplyMe(prices[i], quantities[i]);
+        }
+        return total;
+    }
 }

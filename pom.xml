@@ -32,7 +32,7 @@
     </dependencies>
 
     <build>
-        <finalName>laskin</finalName>
+        <finalName>shoppingcart</finalName>
 
 
         <plugins>

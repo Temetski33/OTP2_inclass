@@ -27,21 +27,27 @@ public class ShoppingCart {
         }
 
         ResourceBundle rb = ResourceBundle.getBundle("MessagesBundle", locale);
-        System.out.println(rb.getString("prompt1"));
-        double a = input.nextDouble();
-        System.out.println(rb.getString("prompt2"));
-        double b = input.nextDouble();
-        double summa = addMe(a, b);
-        double erotus = subMe(a, b);
-        System.out.println(rb.getString("sum") + " " + summa);
-        System.out.println(rb.getString("subtract") + " " + erotus);
+
+        System.out.println(rb.getString("promptItem"));
+        double itemsCount = input.nextDouble();
+
+        double totalCost = 0;
+
+        for (int i = 0; i < itemsCount; i++) {
+            System.out.println(rb.getString("price"));
+            double a = input.nextDouble();
+            System.out.println(rb.getString("quantity"));
+            double b = input.nextDouble();
+            double itemPrice = multiplyMe(a, b);
+
+            totalCost += itemPrice;
+        }
+
+        System.out.println(rb.getString("cost") + " " + totalCost);
     }
 
-    public static double addMe(double a, double b) {
-        return a + b;
+    public static double multiplyMe(double a, double b) {
+        return a * b;
     }
 
-    public static double subMe(double a, double b) {
-        return a - b;
-    }
 }

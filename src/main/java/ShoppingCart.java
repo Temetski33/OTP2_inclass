@@ -14,7 +14,17 @@ public class ShoppingCart {
         int choice = input.nextInt();
 
         Locale locale;
-        locale = new Locale("en", "US");
+
+        switch (choice) {
+            case 1:
+                locale = new Locale("en", "US");
+                break;
+            case 2:
+                locale = new Locale("fi", "FI");
+                break;
+            default:
+                locale = new Locale("en", "US");
+        }
 
         ResourceBundle rb = ResourceBundle.getBundle("MessagesBundle", locale);
         System.out.println(rb.getString("prompt1"));

@@ -37,19 +37,7 @@ public class ShoppingCart {
 
         System.out.println(rb.getString("promptItem"));
         double itemsCount = input.nextDouble();
-
-        double totalCost = 0;
-
-        for (int i = 0; i < itemsCount; i++) {
-            System.out.println(rb.getString("price"));
-            double a = input.nextDouble();
-            System.out.println(rb.getString("quantity"));
-            double b = input.nextDouble();
-            double itemPrice = multiplyMe(a, b);
-
-            totalCost += itemPrice;
-        }
-
+        double totalCost = calculateTotalCost(input, rb, itemsCount);
         System.out.println(rb.getString("cost") + " " + totalCost);
     }
 
@@ -57,4 +45,20 @@ public class ShoppingCart {
         return a * b;
     }
 
+    public static double calculateTotalCost(Scanner input, ResourceBundle rb, double itemsCount) {
+        double totalCost = 0;
+
+        for (int i = 0; i < itemsCount; i++) {
+            System.out.println(rb.getString("price"));
+            double price = input.nextDouble();
+
+            System.out.println(rb.getString("quantity"));
+            double quantity = input.nextDouble();
+
+            totalCost += multiplyMe(price, quantity);
+        }
+
+        return totalCost;
+
+    }
 }

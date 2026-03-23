@@ -11,6 +11,7 @@ public class ShoppingCart {
         System.out.println("1. English");
         System.out.println("2. Suomi");
         System.out.println("3. Svenska");
+        System.out.println("4. Japanese");
         int choice = input.nextInt();
 
         Locale locale;
@@ -21,6 +22,12 @@ public class ShoppingCart {
                 break;
             case 2:
                 locale = new Locale("fi", "FI");
+                break;
+            case 3:
+                locale = new Locale("sv", "SE");
+                break;
+            case 4:
+                locale = new Locale("ja", "JP");
                 break;
             default:
                 locale = new Locale("en", "US");

@@ -57,7 +57,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>LocalizationTest</mainClass>
+                            <mainClass>ShoppingCart</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

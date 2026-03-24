@@ -33,7 +33,7 @@ public class ShoppingCart {
                 locale = new Locale("en", "US");
         }
 
-        ResourceBundle rb = ResourceBundle.getBundle("MessagesBundle", locale);
+        ResourceBundle rb = ResourceBundle.getBundle("Messagesbundle", locale);
 
         System.out.println(rb.getString("promptItem"));
         double itemsCount = input.nextDouble();
